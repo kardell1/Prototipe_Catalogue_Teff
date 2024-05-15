@@ -1,0 +1,168 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- existe un margen que esta presente en toda la pagina  -->
+<Layout title="Turismo">
+  <nav class="flex justify-between py-8 px-20 max-sm:px-2 ">
+    <div>icon</div>
+    <!-- que opciones deberia de tener esta parte?
+    la home es la que muestra el catalogo
+    elements es el que muestra quizas mas detalles de cada producto
+    Materials  mostrara los materiales con los que ha creado el proyecto , puede ser la parte electronica o una descripcion de su proyecto de grado
+    Acerca de , tendria que mostrar cosas de ella , y en que se ha inspirado para crear su proyecto
+    algo? aca podriamos añadir alguna seccion que faltase
+  -->
+    <ul class="flex gap-16 text-[1.2em]">
+      <li class="group transition duration-300">
+        <a href="#"> Home </a>
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[2px] bg-slate-900"
+        ></span>
+      </li>
+      <li class="group transition duration-300">
+        <a href="#"> Elements </a>
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[2px] bg-slate-900"
+        ></span>
+      </li>
+      <li class="group transition duration-300">
+        <a href="#"> Materiales </a>
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[2px] bg-slate-900"
+        ></span>
+      </li>
+      <li class="group transition duration-300">
+        <a href="#"> Acerca de </a>
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[2px] bg-slate-900"
+        ></span>
+      </li>
+      <li class="group transition duration-300">
+        <a href="#"> algo? </a>
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[2px] bg-slate-900"
+        ></span>
+      </li>
+    </ul>
+  </nav>
+  <main class="px-20 max-sm:px-2 ">
+    <!-- el nav esta compuesto por
+    una imagen de fondo ,
+    y podemos poner un div conun png de fondo
+    un texto
+    una descripcion
+    y un boton
+    -->
+    <div
+      class="min-h-[100vh] flex flex-col justify-evenly items-center bg-slate-100"
+    >
+      <div class="">imagen png</div>
+      <div class="w-[40%] flex flex-col gap-7 max-sm:w-[80%] ">
+        <h1 class="text-5xl font-semibold max-sm:text-2xl ">Diseño de pagina</h1>
+        <p class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, aut
+          illum, repudiandae consectetur
+        </p>
+      </div>
+    </div>
+  </main>
+  <!-- aca puede ir un segundo nav  si existe mucha variedad de products -->
+
+  <section class="px-20 max-sm:px-2 max-sm:py-5  py-10">
+    <!-- aca va la seccion de los productos 
+      desplazados de 4 en 4
+    -->
+    <div class="grid grid-cols-4 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1  ">
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-7  py-5  ">
+        <div class="h-[300px] bg-purple-500">imagen</div>
+        <div class="flex flex-col gap-1 text-center">
+          <p class="text-lg">Producto</p>
+          <p class="text-sm font-light">90.00Blvs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- aca va el footer  , que podria ser la misma navegacion en negro -->
+
+
+  <nav class="flex flex-row-reverse bg-stone-900 text-slate-100 justify-between py-12 px-20 max-sm:px-2 ">
+    <div class="text-slate-300 font-extralight" >@All rights reserved kardell</div>
+    <ul class="flex gap-16 text-sm">
+      <li class=" hover:text-slate-300 ">
+        <a href="#"> Home </a>
+        
+      </li>
+      <li class=" hover:text-slate-300 ">
+        <a href="#"> Elements </a>
+        
+      </li>
+      <li class=" hover:text-slate-300 ">
+        <a href="#"> Materiales </a>
+        
+      </li>
+      <li class=" hover:text-slate-300 ">
+        <a href="#"> Acerca de </a>
+        
+      </li>
+    </ul>
+  </nav>
+
+</Layout>
