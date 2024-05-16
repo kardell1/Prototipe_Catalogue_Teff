@@ -1,5 +1,5 @@
 export type TProdCard = {
-    product: string;
-    id: string;
-    price: string;
+    product: string | undefined;
+    id: string  | undefined;
+    price: string  | undefined;
   };

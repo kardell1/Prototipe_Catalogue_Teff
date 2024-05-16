@@ -1,7 +1,4 @@
 ---
-import { FetchDataPost } from "../../api/PostData";
-import { Button } from "./Button";
-
 // propiedades del card
 
 const { product, id, price } = Astro.props;
@@ -14,7 +11,7 @@ const { product, id, price } = Astro.props;
     <!-- <Button client:only="react" id={id} product={product} price={price} /> -->
     <div class="absolute bottom-[50%]">
       <a
-        href="/product"
+        href={`/product?id=${id}&product=${product}&price=${price}`}
         class="bg-stone-900 font-medium text-slate-100 max-w-0 block group-hover:p-2 group-hover:max-w-full duration-300 transition-all overflow-hidden"
       >
         Compra

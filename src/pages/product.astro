@@ -1,15 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Description from "../components/Product/Description.astro"
-import ImageProd from "../components/Product/ImageProd.astro"
+import { Description } from "../components/Product/Description.tsx";
+import ImageProd from "../components/Product/ImageProd.astro";
+
 
 ---
 
-<Layout title="Producto">
+<Layout title="Turismo">
   <main class="">
-    <div class="grid grid-cols-2 min-h-screen">
-      <ImageProd/>
-      <Description/>
+    <div class="grid grid-cols-2 min-h-screen max-sm:grid-cols-1">
+      <ImageProd />
+      <Description
+        client:only="react"
+      />
     </div>
   </main>
 </Layout>
