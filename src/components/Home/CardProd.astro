@@ -1,0 +1,28 @@
+---
+import { FetchDataPost } from "../../api/PostData";
+import { Button } from "./Button";
+
+// propiedades del card
+
+const { product, id, price } = Astro.props;
+---
+
+<div class="flex flex-col gap-7 py-5 relative">
+  <!-- este card tiene los efectos del boton de compra -->
+  <div class="h-[300px] bg-purple-500 group transition duration-300">
+    imagen
+    <!-- <Button client:only="react" id={id} product={product} price={price} /> -->
+    <div class="absolute bottom-[50%]">
+      <a
+        href="/product"
+        class="bg-stone-900 font-medium text-slate-100 max-w-0 block group-hover:p-2 group-hover:max-w-full duration-300 transition-all overflow-hidden"
+      >
+        Compra
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1 text-center">
+    <p class="text-lg">{product}</p>
+    <p class="text-sm font-light">{price} Blvs</p>
+  </div>
+</div>
