@@ -6,9 +6,10 @@ const { product, id, price } = Astro.props;
 
 <div class="flex flex-col gap-7 py-5 relative">
   <!-- este card tiene los efectos del boton de compra -->
-  <div class="h-[300px] bg-purple-500 group transition duration-300">
-    imagen
+  <div class="h-[300px] bg-slate-200  group transition duration-300  ">
+    
     <!-- <Button client:only="react" id={id} product={product} price={price} /> -->
+    <div class="card__image  " ></div>
     <div class="absolute bottom-[50%]">
       <a
         href={`/product?id=${id}&product=${product}&price=${price}`}
@@ -23,3 +24,16 @@ const { product, id, price } = Astro.props;
     <p class="text-sm font-light">{price} Blvs</p>
   </div>
 </div>
+
+
+
+<style>
+  .card__image {
+    background: url(/images/pngwing.com.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+</style>

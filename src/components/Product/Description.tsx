@@ -14,7 +14,7 @@ export const Description = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
-  const id = urlParams.get("id");
+  const id =urlParams.get("id");
   const product = urlParams.get("product");
   const priceString = urlParams.get("price");
   const price = priceString !== null ? parseFloat(priceString) : 0; 
@@ -26,7 +26,7 @@ export const Description = () => {
   
   const handleModal = (bool: boolean) => {
     setModal(bool);
-    console.log("abriendo modal");
+    // console.log("abriendo modal");
   };
 
 
@@ -47,7 +47,7 @@ export const Description = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vel quasi
       </p>
       {modal ? (
-        <Modal price={price} handleModal = {handleModal} />
+        <Modal price={price} code={id} handleModal = {handleModal} />
       ) : (
         ""
       )}

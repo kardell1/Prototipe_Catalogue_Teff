@@ -1,6 +1,15 @@
-import type { TProdCard } from "../components/TProd.ts";
 
-export const FetchDataPost = async ({ id, product, price }: TProdCard) => {
+type Tpost={
+  name : string,
+  cellphone : string,
+  price : number,
+  email : string,
+  amount : number,
+  code : string|null
+}
+
+
+export const FetchDataPost = async ({ name, cellphone, price , email , amount , code }:Tpost ) => {
   /**un fetching de datos  esta compuesto por :
    * una url
    * ,{ method sirve para especificar que hace el fetch : Get post delete patch put
@@ -9,11 +18,11 @@ export const FetchDataPost = async ({ id, product, price }: TProdCard) => {
    * body el cuerpo de la informacion, los datos:
    * }
    */
-  console.log("los datos recuperados son  : " + id);
-  console.log("los datos recuperados son  : " + product);
-  console.log("los datos recuperados son  : " + price);
+  // console.log("los datos recuperados son  : " + name);
+  // console.log("los datos recuperados son  : " + cellphone);
+  // console.log("los datos recuperados son  : " + price);
 
-  const urlServer = "http://localhost:3000/order";
+  const urlServer = "http://192.168.0.167:3000/order";
   try {
     const response = await fetch(urlServer, {
       method: "POST",
@@ -21,9 +30,12 @@ export const FetchDataPost = async ({ id, product, price }: TProdCard) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: id,
-        product: product,
+        name :name , 
+        cellphone :cellphone , 
+        email :email, 
+        amount :amount,
         price: price,
+        code : code
       }),
     }).then((res) => res.json());
     return response;

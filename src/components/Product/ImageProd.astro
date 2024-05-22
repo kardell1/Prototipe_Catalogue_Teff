@@ -1,8 +1,29 @@
 <!-- imagen slider y un boton de regresar -->
-<div class="relative min-h-[80vh] ">
-    <a
-      class="absolute top-4 left-4 p-1 rounded-xl border-2 border-slate-300 text-slate-300 font-semibold hover:text-slate-500 hover:border-slate-500 transition-colors duration-200"
-      href="/">Return</a
-    >
-    <!-- aca va la imagen  -->
+<div class="relative min-h-[80vh]">
+  <a
+    class="absolute top-4 left-4 p-1 rounded-xl border-2 border-slate-300 text-slate-300 font-semibold hover:text-slate-500 hover:border-slate-500 transition-colors duration-200"
+    href="/">Return</a
+  >
+  <!-- aca va la imagen  -->
+  <div class="p-20 w-full h-full " >
+    <div class="card__image"></div>
   </div>
+</div>
+
+<style>
+  .card__image {
+    background: url(/images/pngwing.com.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: scale;
+    transition-duration: 200ms;
+  }
+  .card__image:hover{
+    scale: 1.1;
+  }
+
+
+
+</style>

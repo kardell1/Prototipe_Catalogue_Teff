@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { FetchDataPost } from "../../api/PostData";
 
 type Tmodal = {
+  code : string|null;
   price: number;
   handleModal: (bool: boolean) => void;
 };
 
-export const Modal = ({ price, handleModal }: Tmodal) => {
+export const Modal = ({code, price, handleModal }: Tmodal) => {
   const [amount, setAmount] = useState(1);
   const [prices, setPrice] = useState(price);
   const handleAmount = (event: string) => {
@@ -33,18 +35,25 @@ export const Modal = ({ price, handleModal }: Tmodal) => {
       [name]: value,
     }));
   };
-  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("pulsado el formulario");
+    const res = await FetchDataPost({
+      code : code,
+      cellphone: info.cellphone,
+      name: info.name,
+      price: prices,
+      email: info.email,
+      amount: amount,
+    });
+    // console.log(JSON.stringify(res));
+    // console.log("datos del formulario son : " + info);
 
-    console.log("datos del formulario son : " + info);
+    // console.log("datos del formulario son : " + JSON.stringify(info));
 
-    console.log("datos del formulario son : " + JSON.stringify(info) );
+    // console.log("y el precio fijado es : " + prices);
 
-    console.log("y el precio fijado es : " + prices );
-
-
-    console.log("la cantidad fijada es  : " + amount);
+    // console.log("la cantidad fijada es  : " + amount);
   };
   return (
     <section className="absolute rounded-2xl bg-slate-100 text-slate-600 p-5 min-w-[80%]   ">
@@ -126,7 +135,7 @@ export const Modal = ({ price, handleModal }: Tmodal) => {
           </div>
           <button
             type="submit"
-            className="bg-stone-900 text-slate-100 p-2 font-bold rounded-2xl "
+            className="bg-stone-900 text-slate-100 p-2 font-bold rounded-2xl hover:text-green-600 "
           >
             BUY
           </button>
